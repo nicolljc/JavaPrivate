@@ -32,6 +32,9 @@ public class NumericTypes
       // TASK #3 declare variables used here
 	  char firstInitial;
       // TASK #4 declare variables used here
+	  double d;
+	  double r;
+	  double v;
 
       // Find an arithmetic average.
       average = ((SCORE1 + SCORE2) / NUMBER);
@@ -78,11 +81,11 @@ public class NumericTypes
       // Prompt the user for a diameter of a sphere
 	  System.out.print("Enter the diameter of a sphere: ");
       // Read the diameter
-	  double d = Double.parseDouble(keyboard.nextLine());
+	  d = keyboard.nextFloat();
       // Calculate the radius
-	  double r = d / 2;
+	  r = d / 2.0;
       // Calculate the volume
-	  double v = 4 / 3 * Math.PI * Math.pow(r, 3);
+	  v = (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
       // Print out the volume
 	  System.out.println("Volume is: " + v);
    }
