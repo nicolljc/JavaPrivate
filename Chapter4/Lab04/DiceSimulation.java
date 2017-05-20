@@ -1,4 +1,4 @@
-import java.util.Random;   // Needed for the Random class
+import java.util.Random;   // Needed for the Random number generator
 
 /**
    This class simulates rolling a pair of dice 10,000 times
@@ -6,38 +6,11 @@ import java.util.Random;   // Needed for the Random class
    each different pair of doubles.
 */
 
-public class Dice
-{
-	private int spots;	// number of spots up on the die
-	private static Random generator;	// random number generator
-	
-	public Dice()
-	{
-		generator = new Random();
-		spots = 0;
-	}
-	
-	// simulate rolling the die
-	public void roll()
-	{
-		spots = generator.nextInt(6) + 1;
-	}
-	
-	// return value of die
-	public int getSpots()
-	{
-		return spots;
-	}
-}
-
 public class DiceSimulation
 {
 	public static void main(String[] args)
 	{
 		final int NUMBER = 10000;  // Number of dice rolls
-		
-		Dice die1 = new Dice(); // first die
-		Dice die2 = new Dice(); // second die
 
 		// A random number generator used in
 		// simulating the rolling of dice
@@ -56,34 +29,32 @@ public class DiceSimulation
 		// TASK #1 Enter your code for the algorithm here
 		while (count < NUMBER)
 		{
-			die1.roll();
-			int t1 = die1.getSpots();
-			die2.roll();
-			int t2 = die2.getSpots();
+			die1Value = generator.nextInt(6) + 1;
+			die2Value = generator.nextInt(6) + 1;
 		  
-			if (t1 == t2)
+			if (die1Value == die2Value)
 			{
-				if (t1 == 1)
+				if (die1Value == 1)
 				{
 					snakeEyes++;
 				}
-				else if (t1 == 2)
+				else if (die1Value == 2)
 				{
 					twos++;
 				}
-				else if (t1 == 3)
+				else if (die1Value == 3)
 				{
 					threes++;
 				}
-				else if (t1 == 4)
+				else if (die1Value == 4)
 				{
 					fours++;
 				}
-				else if (t1 == 5)
+				else if (die1Value == 5)
 				{
 					fives++;
 				}
-				else if (t1 == 6)
+				else if (die1Value == 6)
 				{
 					sixes++;
 				}
