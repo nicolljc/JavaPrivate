@@ -51,4 +51,15 @@ public class Rectangle
 	{
 		return width;
 	}
+	
+	/**
+		The getArea method returns a Rectangle
+		object's area.
+		@return The product of length times width.
+	*/
+	
+	public double getArea()
+	{
+		return length * width;
+	}
 }
