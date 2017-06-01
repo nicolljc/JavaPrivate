@@ -54,4 +54,14 @@ public class Stock
 		// Return the string.
 		return str;
 	}
+	
+	public Stock copy()
+	{
+		// Create a new Stock object and initialize it
+		// with the same data held by the calling object.
+		Stock copyObject = new Stock(symbol, sharePrice);
+		
+		// Return a reference to the new object.
+		return copyObject;
+	}
 }
